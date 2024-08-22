@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
-class PlaytimeListOrchestrator(
+class PlaytimeOrchestrator(
     private val preferencesHelper: PreferencesHelper,
     private val activity: AppCompatActivity?
 ) {
