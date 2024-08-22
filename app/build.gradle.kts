@@ -48,6 +48,9 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintLayout)
 
+    // Lifecycle
+    implementation(libs.androidx.lifecycle.runtime)
+
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
 
