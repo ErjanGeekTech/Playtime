@@ -31,13 +31,13 @@ class PlaytimeOrchestrator(
         activity?.lifecycleScope?.launch(Dispatchers.Default) {
             activity.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 while (isActive) {
+                    delay(PLAYTIME_DELAY_SECOND)
+
                     val playtime = currentState.playtime + PLAYTIME_DELAY_SECOND
                     val playtimeStr = playtime.parseToTimeString()
                     currentState = Playtime(playtime = playtime, playtimeStr = playtimeStr)
                     _tickerState.value = playtimeStr
                     preferencesHelper.playtime = playtime
-
-                    delay(PLAYTIME_DELAY_SECOND)
                 }
             }
         }
